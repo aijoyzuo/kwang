@@ -56,6 +56,9 @@
     <button class="btn-curve"><span>聯絡我們</span></button>
     </section>
 
+
+
+
     <!-- 複製上面區塊 11 次，改變 index 和顏色 -->
     <section class="block bg-light p-4 mb-4" style="max-width:1000px; margin:auto;">
       <h1>區塊 2 標題</h1>
@@ -76,6 +79,36 @@
 
     <button class="btn-curve"><span>聯絡我們</span></button>
     </section>
+
+    <section class="block bg-light p-4 mb-4 text-center" style="max-width:1000px; margin:auto;">
+  
+  <!-- Icon -->
+  <span class="icon mb-3 d-inline-block">
+      <i class="ion-cube" style="font-size: 40px; color: #333;"></i>
+  </span>
+
+  <!-- 文字動畫 -->
+  <h6 class="wow words chars splitting animated" data-splitting data-wow-delay="0.3s">
+    Awesome Works
+  </h6>
+
+  <p class="wow fadeIn" data-wow-delay="0.5s">
+    從行銷面到設計面，從線上到線下，為你規劃全方位的行銷方案，並用設計支持你的每一步。
+  </p>
+
+  <!-- 圖片 lazy load -->
+  <img src="img/portfolio/project_allergan/jvd/20210421_volux_billboard_1.webp" 
+       loading="lazy" 
+       class="img-fluid my-3 wow fadeIn" 
+       data-wow-delay="0.7s" 
+       alt="Project Image">
+
+  <!-- 按鈕 -->
+  <button class="btn-curve btn-radius btn-blc mt-3 wow fadeIn" data-wow-delay="0.9s">
+    聯絡我們
+  </button>
+
+</section>
 
      <section class="block bg-light p-4 mb-4" style="max-width:1000px; margin:auto;">
       <h1>區塊 2 標題</h1>
@@ -187,6 +220,17 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
+  <!-- Splitting.js -->
+<script src="https://cdn.jsdelivr.net/npm/splitting/dist/splitting.min.js"></script>
+<!-- WOW.js -->
+<script src="https://cdn.jsdelivr.net/npm/wowjs/dist/wow.min.js"></script>
+<script>
+  // 初始化 Splitting
+  Splitting();
+
+  // 初始化 WOW
+  new WOW().init();
+</script>
 
 </body>
 </html>
