@@ -1,53 +1,192 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>我的專案</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <meta property="og:url" content="https://www.kwang.tw/">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.kwang.tw/img/og/kwang_cover.png">
+    <meta name="keywords" content="寬微廣告, KWang, 品牌設計, 整合行銷, 活動企劃, 視覺設計, 展場設計">
+    <meta name="description" content="深耕廣告行銷領域 15 年，寬微廣告結合整合行銷策略與創意設計，從品牌定位到活動執行，為客戶打造創意與效能兼備的解決方案。">
+    <meta property="og:title" content="寬微廣告｜整合行銷與品牌設計夥伴">
+    <meta property="og:description" content="整合行銷、創意設計、活動規劃一條龍。寬微廣告從大局著眼，細節執行，協助品牌面對快速變動的市場。">
+  <title>KWang Demo</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+   
 </head>
-
 <body>
 
-    <header class="header">
-        <div class="container">
-            <button class="contact-btn">聯絡我們</button>
+  <div class="container py-4">
 
-            <div class="sns">
-                <a href="#"><img src="img/sns/fb.png"></a>
-                <a href="#"><img src="img/sns/ig.png"></a>
-                <a href="#"><img src="img/sns/yt.png"></a>
-            </div>
+    <!-- 12 區塊示範 -->
+    <!-- 用 for-loop 或複製 12 次即可 -->
+    <!-- 區塊 index 1~12 -->
+    <!-- 區塊背景用灰色作墊色，前景圖用占位圖 lazy load -->
+    <!-- Swiper 內也用占位圖示範 -->
+
+    <!-- Block 1 -->
+    <section class="block bg-light p-4 mb-4" style="max-width:1000px; margin:auto;">
+      <h1>區塊 1 標題</h1>
+      <img data-src="https://via.placeholder.com/1000x200/000000/ffffff?text=Block1+Foreground" class="swiper-lazy img-fluid mb-3">
+
+      <div class="swiper long-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/ff0000/ffffff?text=Slide+1" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/00ff00/ffffff?text=Slide+2" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
         </div>
-    </header>
+      </div>
 
-    <main class="main">
+    <button class="btn-curve"><span>聯絡我們</span></button>
+    </section>
 
-        <section class="swiper long-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img data-src="img/long1.jpg" class="swiper-lazy">
-                    <div class="swiper-lazy-preloader"></div>
-                </div>
-            </div>
-        </section>
+    <!-- 複製上面區塊 11 次，改變 index 和顏色 -->
+    <section class="block bg-light p-4 mb-4" style="max-width:1000px; margin:auto;">
+      <h1>區塊 2 標題</h1>
+      <img data-src="https://via.placeholder.com/1000x200/111111/ffffff?text=Block2+Foreground" class="swiper-lazy img-fluid mb-3">
 
-        <section class="swiper long-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img data-src="img/long2.jpg" class="swiper-lazy">
-                    <div class="swiper-lazy-preloader"></div>
-                </div>
-            </div>
-        </section>
+      <div class="swiper long-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/ff00ff/ffffff?text=Slide+1" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/00ffff/ffffff?text=Slide+2" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+        </div>
+      </div>
 
-    </main>
+    <button class="btn-curve"><span>聯絡我們</span></button>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
+     <section class="block bg-light p-4 mb-4" style="max-width:1000px; margin:auto;">
+      <h1>區塊 2 標題</h1>
+      <img data-src="https://via.placeholder.com/1000x200/111111/ffffff?text=Block2+Foreground" class="swiper-lazy img-fluid mb-3">
+
+      <div class="swiper long-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/ff00ff/ffffff?text=Slide+1" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/00ffff/ffffff?text=Slide+2" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+        </div>
+      </div>
+
+    <button class="btn-curve"><span>聯絡我們</span></button>
+    </section>
+
+     <section class="block bg-light p-4 mb-4" style="max-width:1000px; margin:auto;">
+      <h1>區塊 2 標題</h1>
+      <img data-src="https://via.placeholder.com/1000x200/111111/ffffff?text=Block2+Foreground" class="swiper-lazy img-fluid mb-3">
+
+      <div class="swiper long-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/ff00ff/ffffff?text=Slide+1" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/00ffff/ffffff?text=Slide+2" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+        </div>
+      </div>
+
+    <button class="btn-curve"><span>聯絡我們</span></button>
+    </section>
+
+     <section class="block bg-light p-4 mb-4" style="max-width:1000px; margin:auto;">
+      <h1>區塊 2 標題</h1>
+      <img data-src="https://via.placeholder.com/1000x200/111111/ffffff?text=Block2+Foreground" class="swiper-lazy img-fluid mb-3">
+
+      <div class="swiper long-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/ff00ff/ffffff?text=Slide+1" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/00ffff/ffffff?text=Slide+2" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+        </div>
+      </div>
+
+    <button class="btn-curve"><span>聯絡我們</span></button>
+    </section>
+
+     <section class="block bg-light p-4 mb-4" style="max-width:1000px; margin:auto;">
+      <h1>區塊 2 標題</h1>
+      <img data-src="https://via.placeholder.com/1000x200/111111/ffffff?text=Block2+Foreground" class="swiper-lazy img-fluid mb-3">
+
+      <div class="swiper long-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/ff00ff/ffffff?text=Slide+1" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/00ffff/ffffff?text=Slide+2" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>         
+        </div>
+         <p class="tetx-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur exercitationem mollitia rerum! QuosLorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur exercitationem mollitia rerum! QuosLorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur exercitationem mollitia rerum! QuosLorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur exercitationem mollitia rerum! QuosLorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur exercitationem mollitia rerum! QuosLorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur exercitationem mollitia rerum! QuosLorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur exercitationem mollitia rerum! Quos facere ipsa ex cum assumenda laudantium corporis voluptatibus, fugit ullam quis. Asperiores rerum dolore error voluptatum laborum!</p>
+      </div>
+
+    <button class="btn-curve"><span>聯絡我們</span></button>
+    </section>
+
+     <section class="block bg-light p-4 mb-4" style="max-width:1000px; margin:auto;">
+      <h1>區塊 2 標題</h1>
+      <img data-src="https://via.placeholder.com/1000x200/111111/ffffff?text=Block2+Foreground" class="swiper-lazy img-fluid mb-3">
+
+      <div class="swiper long-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/ff00ff/ffffff?text=Slide+1" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div class="swiper-slide">
+            <img data-src="https://via.placeholder.com/1000x150/00ffff/ffffff?text=Slide+2" class="swiper-lazy img-fluid">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+        </div>
+      </div>
+
+    <button class="btn-curve"><span>聯絡我們</span></button>
+    </section>
+    <!-- 重複 10 個類似區塊（Block 3~12） -->
+    <!-- 這裡省略，可複製修改 index 與顏色 -->
+    
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
