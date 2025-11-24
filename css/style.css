@@ -1,74 +1,75 @@
+/* 全站預設：Times New Roman */
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
-    background-color: #ffffff;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "Times New Roman", "思源黑體", "Noto Sans CJK", serif;
 }
+
+
+/* 字重 */
+.w-regular { font-weight: 400; }
+.w-medium  { font-weight: 500; }
+.w-bold    { font-weight: 700; }
 
 /* 區塊基本設計 */
 .content-block {
-    max-width: 1000px;
-    margin: auto;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    z-index: 0;
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
 }
 
 /* 背景 lazy 區塊 */
 .lazy-bg {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* 預設先透明，載入後再淡入 */
-    opacity: 0;
-    transition: opacity 0.5s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .lazy-bg.bg-loaded {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Swiper */
 .swiper {
-    width: 100%;
+  width: 100%;
 }
 
-/* Lazy 圖片預設透明 → lazy-load 時淡入 */
+/* Lazy 圖片淡入 */
 .lazy-img,
 .swiper-slide img {
-    opacity: 0;
-    transition: opacity 0.5s ease;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-/* 前景圖載入完 */
 .lazy-img.lazy-loaded {
-    opacity: 1;
+  opacity: 1;
 }
 
-/* Swiper lazy 載入完 */
 .swiper-slide img.swiper-lazy-loaded {
-    opacity: 1;
+  opacity: 1;
 }
 
-/* 按鈕 */
+/* =================按鈕================ */
 .btn-curve {
     position: relative;
     display: inline-block;
     padding: 14px 35px;
     border-radius: 30px;
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
     cursor: pointer;
     overflow: hidden;
     transition: color 0.3s ease;
+    border: 1px solid;
 }
 
 .btn-curve::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: #000;
     border-radius: inherit;
     transform: scaleY(0);
     transform-origin: top;
@@ -76,20 +77,45 @@ body {
     z-index: 0;
 }
 
-.btn-curve:hover::after {
-    transform: scaleY(1);
-}
-
-.btn-curve:hover {
-    color: #fff;
-}
-
 .btn-curve span {
     position: relative;
     z-index: 2;
 }
 
-/* 讓文字在亮背景上可讀性好一點 */
-.content-block h2 {
+/*按鈕白色*/
+.btn-white {
+    background-color: #fff;
     color: #000;
+    border-color: #000;
+}
+
+.btn-white::after {
+    background: #000;
+}
+
+.btn-white:hover {
+    color: #fff;
+}
+
+.btn-white:hover::after {
+    transform: scaleY(1);
+}
+
+/*按鈕黑色*/
+.btn-black {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.btn-black::after {
+    background: #fff;
+}
+
+.btn-black:hover {
+    color: #000;
+}
+
+.btn-black:hover::after {
+    transform: scaleY(1);
 }
