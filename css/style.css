@@ -119,3 +119,25 @@ body {
 .btn-black:hover::after {
     transform: scaleY(1);
 }
+
+/*============kwang logo===========*/
+.logo {
+    width: 150px;
+    height: 50px;
+    background-image: url("../image/Kwang_logo_light.webp");
+    color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
