@@ -1,0 +1,24 @@
+/* Background lazy */
+.lazy-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  &.bg-loaded {
+    opacity: 1;
+  }
+}
+
+/* Lazy image */
+.lazy-img,
+.swiper-slide img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  &.lazy-loaded,
+  &.swiper-lazy-loaded {
+    opacity: 1;
+  }
+}

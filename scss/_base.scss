@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "Times New Roman", "思源黑體", "Noto Sans CJK", serif;
+}
+
+.w-regular { font-weight: 400; }
+.w-medium  { font-weight: 500; }
+.w-bold    { font-weight: 700; }
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*==========layuot==========*/
+.container {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.content-body {
+  padding: 24px;
+}
+
+/*==========KWang-logo==========*/
+.KWang-logo {
+  width: 100%;
+  height: 30px;
+  background-image: url("../image/Kwang_logo_light.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  color: #fff;
+
+  @media (min-width: 768px) {
+    height: 50px;
+  }
+}
+
+.kwang-address{
+  font-size: 8px ;
+  @media (min-width: 768px) {
+    font-size: 12px ;
+  }
+} 

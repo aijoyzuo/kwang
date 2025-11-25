@@ -1,0 +1,148 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "Times New Roman", "思源黑體", "Noto Sans CJK", serif;
+}
+
+.w-regular {
+  font-weight: 400;
+}
+
+.w-medium {
+  font-weight: 500;
+}
+
+.w-bold {
+  font-weight: 700;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*==========layuot==========*/
+.container {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.content-body {
+  padding: 24px;
+}
+
+/*==========KWang-logo==========*/
+.KWang-logo {
+  width: 100%;
+  height: 30px;
+  background-image: url("../image/Kwang_logo_light.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .KWang-logo {
+    height: 50px;
+  }
+}
+
+.kwang-address {
+  font-size: 8px;
+}
+@media (min-width: 768px) {
+  .kwang-address {
+    font-size: 12px;
+  }
+}
+
+.btn-curve {
+  position: relative;
+  display: inline-block;
+  padding: 14px 35px;
+  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  border: 1px solid;
+}
+.btn-curve::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+.btn-curve span {
+  position: relative;
+  z-index: 2;
+}
+.btn-curve.btn-white {
+  background: #fff;
+  color: #000;
+  border-color: #000;
+}
+.btn-curve.btn-white::after {
+  background: #000;
+}
+.btn-curve.btn-white:hover {
+  color: #fff;
+}
+.btn-curve.btn-white:hover::after {
+  transform: scaleY(1);
+}
+.btn-curve.btn-black {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+.btn-curve.btn-black::after {
+  background: #fff;
+}
+.btn-curve.btn-black:hover {
+  color: #000;
+}
+.btn-curve.btn-black:hover::after {
+  transform: scaleY(1);
+}
+
+/* Background lazy */
+.lazy-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.lazy-bg.bg-loaded {
+  opacity: 1;
+}
+
+/* Lazy image */
+.lazy-img,
+.swiper-slide img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.lazy-img.lazy-loaded, .lazy-img.swiper-lazy-loaded,
+.swiper-slide img.lazy-loaded,
+.swiper-slide img.swiper-lazy-loaded {
+  opacity: 1;
+}
+
+.swiper {
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */
