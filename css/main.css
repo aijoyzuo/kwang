@@ -66,27 +66,6 @@ body {
   }
 }
 
-/*==========bg-transform==========*/
-/* 父元素相對定位，方便 ::before 放背景 */
-.bg-transform {
-  position: relative;
-  overflow: hidden;
-}
-
-/* 背景圖翻轉 + 旋轉，不影響內部內容 */
-.bg-transform::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("image/bgimage01.jpg");
-  background-size: cover;
-  background-position: center;
-  transform: scaleX(-1) rotate(-90deg);
-  z-index: -1; /* 放在內容後面 */
-  transition: opacity 0.6s ease;
-  opacity: 0;
-}
-
 .btn-curve {
   position: relative;
   display: inline-block;
