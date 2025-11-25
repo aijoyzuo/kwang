@@ -38,13 +38,18 @@ body {
 }
 
 .content-body {
-  padding: 24px;
+  padding: 50px 42px;
+}
+@media (min-width: 768px) {
+  .content-body {
+    padding: 70px 50px;
+  }
 }
 
 /*==========KWang-logo==========*/
 .KWang-logo {
   width: 100%;
-  height: 30px;
+  height: 35px;
   background-image: url("../image/Kwang_logo_light.webp");
   background-size: contain;
   background-repeat: no-repeat;
@@ -56,25 +61,82 @@ body {
     height: 50px;
   }
 }
+@media (min-width: 992px) {
+  .KWang-logo {
+    height: 54px;
+  }
+}
 
 .kwang-address {
-  font-size: 8px;
+  font-size: 10px;
+  letter-spacing: 2px;
 }
 @media (min-width: 768px) {
   .kwang-address {
     font-size: 12px;
   }
 }
+@media (min-width: 992px) {
+  .kwang-address {
+    font-size: 16px;
+  }
+}
 
+.kwang-contect {
+  font-size: 12px;
+  letter-spacing: 1.7px;
+}
+@media (min-width: 768px) {
+  .kwang-contect {
+    font-size: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .kwang-contect {
+    font-size: 18px;
+  }
+}
+
+/* 先把字藏起來 */
+.splitting .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+/* WOW 幫 <p> 加上 .animated 時，才開始逐字動畫 */
+.splitting.animated .char {
+  animation: charFadeUp 0.5s ease-out forwards;
+  animation-delay: calc(0.03s * var(--char-index));
+}
+
+@keyframes charFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .btn-curve {
   position: relative;
   display: inline-block;
-  padding: 14px 35px;
+  padding: 8px 35px;
   border-radius: 30px;
   cursor: pointer;
   overflow: hidden;
   transition: color 0.3s ease;
   border: 1px solid;
+  font-size: 14px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .btn-curve {
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) {
+  .btn-curve {
+    font-size: 20px;
+  }
 }
 .btn-curve::after {
   content: "";
@@ -93,7 +155,7 @@ body {
 .btn-curve.btn-white {
   background: #fff;
   color: #000;
-  border-color: #000;
+  border-color: #ffffff;
 }
 .btn-curve.btn-white::after {
   background: #000;
@@ -143,6 +205,129 @@ body {
   opacity: 1;
 }
 
+/* 中間白線 */
+.line {
+  flex-grow: 1; /* 撐滿中間空間 */
+  height: 1px; /* 線的高度 */
+  background-color: #fff; /* 白色 */
+  margin: 0 10px; /* 線左右間距，可調整 */
+}
+
 .swiper {
   width: 100%;
+}
+
+.section1-overlay {
+  position: relative; /* 父元素要相對定位 */
+}
+
+.section1-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色 */
+  z-index: 1; /* 放在背景上，文字下方 */
+}
+
+/* Section 1 圖片 */
+.section1-image1 {
+  height: 78px;
+}
+@media (min-width: 768px) {
+  .section1-image1 {
+    height: 117px;
+  }
+}
+@media (min-width: 992px) {
+  .section1-image1 {
+    height: 140px;
+  }
+}
+
+.section1-image2 {
+  height: 110px;
+}
+@media (min-width: 768px) {
+  .section1-image2 {
+    height: 165px;
+  }
+}
+@media (min-width: 992px) {
+  .section1-image2 {
+    height: 200px;
+  }
+}
+
+.section1-image3 {
+  height: 230px;
+}
+@media (min-width: 768px) {
+  .section1-image3 {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .section1-image3 {
+    height: 500px;
+  }
+}
+
+.section1-image4 {
+  height: 48px;
+}
+@media (min-width: 768px) {
+  .section1-image4 {
+    height: 58px;
+  }
+}
+@media (min-width: 992px) {
+  .section1-image4 {
+    height: 70px;
+  }
+}
+
+.section1-text1 {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+@media (min-width: 768px) {
+  .section1-text1 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 992px) {
+  .section1-text1 {
+    font-size: 28px;
+  }
+}
+
+.section1-text2 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+@media (min-width: 768px) {
+  .section1-text2 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .section1-text2 {
+    font-size: 24px;
+  }
+}
+
+/* 社群 icon */
+.snsicon {
+  height: 14px;
+}
+@media (min-width: 768px) {
+  .snsicon {
+    height: 18px;
+  }
+}
+@media (min-width: 992px) {
+  .snsicon {
+    height: 32px;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,98 @@
+
+.section1-overlay {
+  position: relative; /* 父元素要相對定位 */
+}
+
+.section1-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色 */
+  z-index: 1; /* 放在背景上，文字下方 */
+}
+
+/* Section 1 圖片 */
+.section1-image1 {
+  height: 78px;
+
+  @media (min-width: 768px) {
+    height: 117px;
+  }
+
+  @media (min-width: 992px) {
+    height: 140px; // 桌面可再調整
+  }
+}
+
+.section1-image2 {
+  height: 110px;
+
+  @media (min-width: 768px) {
+    height: 165px;
+  }
+
+  @media (min-width: 992px) {
+    height: 200px;
+  }
+}
+
+.section1-image3 {
+  height: 230px;
+
+  @media (min-width: 768px) {
+    height: 400px;
+  }
+
+  @media (min-width: 992px) {
+    height: 500px;
+  }
+}
+
+.section1-image4 {
+  height: 48px;
+
+  @media (min-width: 768px) {
+    height: 58px;
+  }
+
+  @media (min-width: 992px) {
+    height: 70px;
+  }
+}
+
+ .section1-text1{
+    font-size: 12px;
+    letter-spacing: 1px;
+    @media (min-width: 768px) {
+     font-size: 22px;
+  }
+
+  @media (min-width: 992px) {
+     font-size: 28px;
+  }
+ }
+
+.section1-text2{
+     font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 2;
+    @media (min-width: 768px) {
+     font-size: 20px;
+  }
+
+  @media (min-width: 992px) {
+     font-size: 24px;
+  }
+}
+
+/* 社群 icon */
+
+.snsicon{
+    height: 14px;
+     @media (min-width: 768px) {
+    height: 18px;
+  }
+  @media (min-width: 992px) {
+    height: 32px;
+  }
+}
