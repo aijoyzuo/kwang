@@ -194,15 +194,17 @@ body {
 }
 
 /* Lazy image */
-.lazy-img,
-.swiper-slide img {
+/* 統一所有 lazy-img 的基礎動畫：淡入 + 下往上滑 */
+.lazy-img {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
 }
-.lazy-img.lazy-loaded, .lazy-img.swiper-lazy-loaded,
-.swiper-slide img.lazy-loaded,
-.swiper-slide img.swiper-lazy-loaded {
+
+/* 圖片真正載完後才跑進場動畫 */
+.lazy-img.lazy-loaded {
   opacity: 1;
+  transform: translateY(0);
 }
 
 /* 中間白線 */
@@ -329,5 +331,56 @@ body {
 @media (min-width: 992px) {
   .snsicon {
     height: 32px;
+  }
+}
+
+.section2-image1 {
+  height: 170px;
+}
+@media (min-width: 768px) {
+  .section2-image1 {
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .section2-image1 {
+    height: 400px;
+  }
+}
+
+.section2-text2 {
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .section2-text2 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .section2-text2 {
+    font-size: 24px;
+  }
+}
+
+.section2-text-underline {
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+}
+
+.section2-button {
+  bottom: 0;
+  right: -170px;
+}
+@media (min-width: 768px) {
+  .section2-button {
+    right: -260px;
+  }
+}
+@media (min-width: 992px) {
+  .section2-button {
+    right: -310px;
   }
 }/*# sourceMappingURL=main.css.map */

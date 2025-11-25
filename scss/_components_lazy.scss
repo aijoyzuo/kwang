@@ -12,15 +12,17 @@
 }
 
 /* Lazy image */
-.lazy-img,
-.swiper-slide img {
-  opacity: 0;
-  transition: opacity 0.5s ease;
+/* 統一所有 lazy-img 的基礎動畫：淡入 + 下往上滑 */
+.lazy-img {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
 
-  &.lazy-loaded,
-  &.swiper-lazy-loaded {
+/* 圖片真正載完後才跑進場動畫 */
+.lazy-img.lazy-loaded {
     opacity: 1;
-  }
+    transform: translateY(0);
 }
 
 /* 中間白線 */
