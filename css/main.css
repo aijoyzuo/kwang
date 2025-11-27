@@ -220,15 +220,19 @@ body {
 }
 
 .section1-overlay {
-  position: relative; /* 父元素要相對定位 */
+  position: relative;
+  /* 父元素要相對定位 */
 }
 
 .section1-overlay::before {
   content: "";
   position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
-  background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色 */
-  z-index: 1; /* 放在背景上，文字下方 */
+  inset: 0;
+  /* top:0; right:0; bottom:0; left:0 */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* 半透明黑色 */
+  z-index: 1;
+  /* 放在背景上，文字下方 */
 }
 
 /* Section 1 圖片 */
@@ -290,7 +294,7 @@ body {
 
 .section1-text1 {
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 @media (min-width: 768px) {
   .section1-text1 {
@@ -305,7 +309,7 @@ body {
 
 .section1-text2 {
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   line-height: 2;
 }
 @media (min-width: 768px) {
@@ -348,18 +352,18 @@ body {
   }
 }
 
-.section2-text2 {
+.section2-text1 {
   font-size: 10px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   line-height: 1.5;
 }
 @media (min-width: 768px) {
-  .section2-text2 {
+  .section2-text1 {
     font-size: 20px;
   }
 }
 @media (min-width: 992px) {
-  .section2-text2 {
+  .section2-text1 {
     font-size: 24px;
   }
 }
@@ -382,5 +386,139 @@ body {
 @media (min-width: 992px) {
   .section2-button {
     right: -310px;
+  }
+}
+
+.section2-line {
+  position: relative;
+  height: 100px;
+}
+.section2-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: #000000;
+  transform: translateX(-50%);
+  z-index: 0;
+  opacity: 0.6;
+}
+@media (min-width: 768px) {
+  .section2-line {
+    height: 120px;
+  }
+}
+@media (min-width: 992px) {
+  .section2-line {
+    height: 200px;
+  }
+}
+
+.section3-text1 {
+  font-size: 12px;
+  letter-spacing: 5px;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .section3-text1 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) {
+  .section3-text1 {
+    font-size: 22px;
+  }
+}
+
+.section3-text2 {
+  font-size: 18px;
+  letter-spacing: 4px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .section3-text2 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 992px) {
+  .section3-text2 {
+    font-size: 32px;
+  }
+}
+
+.section3-line1 {
+  position: relative;
+  height: 200px;
+}
+.section3-line1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10%;
+  width: 1px;
+  background: #ffffff;
+  transform: translateX(-50%);
+  z-index: 0;
+  opacity: 0.6;
+}
+@media (min-width: 768px) {
+  .section3-line1 {
+    height: 250px;
+  }
+}
+@media (min-width: 992px) {
+  .section3-line1 {
+    height: 280px;
+  }
+}
+
+.section3-line2 {
+  position: relative;
+  height: 180px;
+}
+.section3-line2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: #ffffff;
+  transform: translateX(-50%);
+  z-index: 0;
+  opacity: 0.6;
+}
+@media (min-width: 768px) {
+  .section3-line2 {
+    height: 210px;
+  }
+}
+@media (min-width: 992px) {
+  .section3-line2 {
+    height: 250px;
+  }
+}
+
+.section3-image1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(50% + 20px); /* 線的 left - 圖片寬度的一半 或距離 */
+  height: 110px;
+}
+@media (min-width: 768px) {
+  .section3-image1 {
+    height: 165px;
+    right: calc(50% + 30px);
+  }
+}
+@media (min-width: 992px) {
+  .section3-image1 {
+    height: 200px;
+    right: calc(50% + 40px);
   }
 }/*# sourceMappingURL=main.css.map */

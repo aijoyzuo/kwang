@@ -10,9 +10,9 @@
   }
 }
 
-.section2-text2 {
+.section2-text1 {
     font-size: 10px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     line-height: 1.5;
 
     @media (min-width: 768px) {
@@ -40,5 +40,28 @@
 
     @media (min-width: 992px) {
        right: -310px;
+    }
+}
+.section2-line {
+  position: relative;
+  height: 100px; 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;              // 置中
+    width: 1px;             // 線的粗細
+    background: #000000;    // 線條顏色
+    transform: translateX(-50%);
+    z-index: 0;             // 線條在圖片後方
+    opacity: 0.6;           // 可改透明度
+  }
+   @media (min-width: 768px) {
+         height: 120px;
+    }
+
+    @media (min-width: 992px) {
+        height: 200px;
     }
 }
