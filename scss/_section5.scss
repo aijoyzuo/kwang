@@ -1,19 +1,19 @@
 .content2-body {
-    padding: 50px 0px;
+    padding: 86px 0px;
 
     @media (min-width: 768px) {
-        padding: 90px 0px;
+        padding: 146px 0px;
     }
 
     @media (min-width: 992px) {
-        padding: 90px 0px;
+        padding: 171px 0px;
     }
 }
 
 .section5-overlay {
     position: relative;
     overflow: hidden;
-    border-radius: 3.725rem;
+    border-radius: 3rem;
     background-color: #fff;
     /* 白色卡片 */
     padding: 50px 42px;
@@ -26,5 +26,71 @@
         padding: 90px 90px;
     }
 
-    /* 自己調 */
+
+}
+
+.bgimage-black {      
+    max-width: 100px;   
+    top: 0;
+    right: 17%;   
+     @media (min-width: 768px) {
+        max-width: 170px; 
+        right: 15%;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 200px; 
+        right: 15%;
+    }
+}
+
+.bgimage-white {
+   max-width: 100px;   
+    bottom: 2px;
+    left: 17%;   
+     z-index: 20;
+     @media (min-width: 768px) {
+        max-width: 170px; 
+        left: 15%;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 200px; 
+        left: 15%;
+    }
+}
+
+.section5-text1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+    line-height: 1;
+     font-weight: 700;
+
+    @media (min-width: 768px) {
+        font-size: 94px;
+        letter-spacing: 4px;
+       
+    }
+
+    @media (min-width: 992px) {
+        font-size: 114px;
+        letter-spacing: 5px;
+    }
+}
+
+.section5-text2 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+     font-weight: 500;
+
+    @media (min-width: 768px) {
+        font-size: 24px;
+        letter-spacing: 5px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 36px;
+        letter-spacing: 5px;
+    }
 }
