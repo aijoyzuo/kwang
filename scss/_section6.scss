@@ -1,8 +1,20 @@
+.logo-content{
+  padding-top:20px;
+  padding-bottom: 80px;
+  @media (min-width: 768px) {
+    padding-top:80px;
+  padding-bottom: 180px;;
+  }
+
+}
+
+
+
 .section6-logo {
   width: 100%;
   transform-origin: center;
   transition:
-    transform 0.45s cubic-bezier(.4,0,.2,1),
+    transform 0.45s cubic-bezier(.4, 0, .2, 1),
     opacity 0.45s ease;
 }
 
@@ -12,24 +24,64 @@
 }
 
 .section6-text1 {
+  position: absolute;
+  top: 0;
+  left: 60%;
   white-space: nowrap;
   transform: rotate(90deg);
-//   transform-origin: left top;
-
-  font-size: 12px;
-  letter-spacing: 5px;
-  line-height: 1.5;
+  transform-origin: top left;
   
-}
 
-@media (min-width: 768px) {
-  .section6-text1 {
-    font-size: 18px;
+  font-size: 20px;
+  letter-spacing: 5px;
+  line-height: 1.2;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 40px;
   }
 }
 
-@media (min-width: 992px) {
-  .section6-text1 {
-    font-size: 28px;
+.section6-text3 {
+  position: absolute;
+  top: 0;
+  left: 90%;
+  white-space: nowrap;
+  transform: rotate(90deg);
+  transform-origin: top left;
+  
+
+  font-size: 20px;
+  letter-spacing: 5px;
+  line-height: 1.2;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 40px;
+  }
+}
+
+
+
+
+
+.section6-text2 {
+  font-size: 12px;
+  letter-spacing: 6px;
+  line-height: 1.5;
+  font-weight: 500;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 40px;
   }
 }
