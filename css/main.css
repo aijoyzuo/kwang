@@ -871,4 +871,37 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover; /* 讓圖片填滿、不變形 */
+}
+
+.section13-overlay {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  background-color: #ffffff;
+  padding: 86px 0px;
+}
+@media (min-width: 768px) {
+  .section13-overlay {
+    padding: 146px 0px;
+  }
+}
+@media (min-width: 992px) {
+  .section13-overlay {
+    padding: 171px 0px;
+  }
+}
+
+.section13-overlay2 {
+  padding: 0px 42px;
+}
+@media (min-width: 768px) {
+  .section13-overlay2 {
+    padding: 0px 70px;
+  }
+}
+@media (min-width: 992px) {
+  .section13-overlay2 {
+    padding: 0px 90px;
+  }
 }/*# sourceMappingURL=main.css.map */
