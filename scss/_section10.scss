@@ -33,3 +33,18 @@
         left: 15%;
     }
 }
+
+.bgimage-black2 {      
+    max-width: 100px;   
+    top: -1px;
+    right: 17%;   
+     @media (min-width: 768px) {
+        max-width: 170px; 
+        right: 15%;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 200px; 
+        right: 15%;
+    }
+}

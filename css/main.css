@@ -823,6 +823,24 @@ body {
   }
 }
 
+.bgimage-black2 {
+  max-width: 100px;
+  top: -1px;
+  right: 17%;
+}
+@media (min-width: 768px) {
+  .bgimage-black2 {
+    max-width: 170px;
+    right: 15%;
+  }
+}
+@media (min-width: 992px) {
+  .bgimage-black2 {
+    max-width: 200px;
+    right: 15%;
+  }
+}
+
 .swiper {
   width: 100%;
   padding: 20px 0;
