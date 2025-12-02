@@ -981,4 +981,101 @@ body {
   .section13-text3 {
     font-size: 56px;
   }
+}
+
+.section14-line1 {
+  position: relative;
+  height: 200px;
+}
+.section14-line1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20%;
+  width: 1px;
+  background: #ffffff;
+  transform: translateX(-50%);
+  z-index: 0;
+  opacity: 0.6;
+}
+@media (min-width: 768px) {
+  .section14-line1 {
+    height: 250px;
+  }
+}
+@media (min-width: 992px) {
+  .section14-line1 {
+    height: 280px;
+  }
+}
+
+.section14-image1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(50% + 20px); /* 線的 left - 圖片寬度的一半 或距離 */
+  height: 110px;
+}
+@media (min-width: 768px) {
+  .section14-image1 {
+    height: 165px;
+    left: calc(50% + 30px);
+  }
+}
+@media (min-width: 992px) {
+  .section14-image1 {
+    height: 200px;
+    left: calc(50% + 40px);
+  }
+}
+
+.section14-text1 {
+  font-size: 32px;
+  letter-spacing: 4px;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .section14-text1 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .section14-text1 {
+    font-size: 48px;
+  }
+}
+
+.section14-text2 {
+  font-size: 38px;
+  letter-spacing: 5px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .section14-text2 {
+    font-size: 48px;
+  }
+}
+@media (min-width: 992px) {
+  .section14-text2 {
+    font-size: 57px;
+  }
+}
+
+.section14-text3 {
+  font-size: 115px;
+  letter-spacing: 5px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .section14-text3 {
+    font-size: 150px;
+  }
+}
+@media (min-width: 992px) {
+  .section14-text3 {
+    font-size: 180px;
+  }
 }/*# sourceMappingURL=main.css.map */

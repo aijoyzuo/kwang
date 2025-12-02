@@ -1,0 +1,88 @@
+.section14-line1 {
+  position: relative;
+  height: 200px; 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20%;              // 置中
+    width: 1px;             // 線的粗細
+    background: #ffffff;    // 線條顏色
+    transform: translateX(-50%);
+    z-index: 0;             // 線條在圖片後方
+    opacity: 0.6;           // 可改透明度
+  }
+   @media (min-width: 768px) {
+       height: 250px; 
+    }
+
+    @media (min-width: 992px) {
+        height: 280px; 
+    }
+}
+
+.section14-image1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(50% + 20px); /* 線的 left - 圖片寬度的一半 或距離 */
+    height: 110px;
+
+    @media (min-width: 768px) {
+        height: 165px;
+         left: calc(50% + 30px); 
+    }
+
+    @media (min-width: 992px) {
+        height: 200px;
+         left: calc(50% + 40px); 
+    }
+}
+
+.section14-text1 {
+    font-size: 32px;
+    letter-spacing: 4px;
+    line-height: 1.5;
+    
+
+    @media (min-width: 768px) {
+        font-size: 40px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 48px;
+    }
+}
+
+.section14-text2 {
+    font-size: 38px;
+    letter-spacing: 5px;
+    line-height: 1.5;
+     font-weight: 500;
+
+    @media (min-width: 768px) {
+        font-size: 48px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 57px;
+    }
+}
+
+.section14-text3 {
+    font-size: 115px;
+    letter-spacing: 5px;
+    line-height: 1.5;
+     font-weight: 500;
+
+    @media (min-width: 768px) {
+        font-size: 150px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 180px;
+    }
+}
+
+
