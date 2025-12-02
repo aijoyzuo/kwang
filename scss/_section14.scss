@@ -1,0 +1,53 @@
+.section14-layout {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section14-text1 {
+    font-size: 18px;
+    letter-spacing: 4px;
+    line-height: 1.5;  
+
+    @media (min-width: 768px) {
+        font-size: 36px;
+        letter-spacing: 5px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 48px;
+        letter-spacing: 6px;
+    }
+}
+
+.section14-text2 {
+    font-size: 36px;  
+    opacity: 0.6;
+
+    @media (min-width: 768px) {
+        font-size: 48px;
+        letter-spacing: 5px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 50px;
+        letter-spacing: 6px;
+    }
+}
+
+
+.section14-text3 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    white-space: nowrap;
+    font-size: 36px;
+    letter-spacing: 20px;
+    line-height: 1.5;
+
+    @media (min-width: 768px) {
+        font-size: 48px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 56px;
+    }
+}

@@ -218,6 +218,7 @@ body {
   height: 1px; /* 線的高度 */
   background-color: #fff; /* 白色 */
   margin: 0 10px; /* 線左右間距，可調整 */
+  opacity: 0.6;
 }
 
 .swiper {
@@ -921,4 +922,63 @@ body {
 /* lazy loaded */
 .bg-container.bg-loaded {
   opacity: 1;
+}
+
+.section14-layout {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section14-text1 {
+  font-size: 18px;
+  letter-spacing: 4px;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .section14-text1 {
+    font-size: 36px;
+    letter-spacing: 5px;
+  }
+}
+@media (min-width: 992px) {
+  .section14-text1 {
+    font-size: 48px;
+    letter-spacing: 6px;
+  }
+}
+
+.section14-text2 {
+  font-size: 36px;
+  opacity: 0.6;
+}
+@media (min-width: 768px) {
+  .section14-text2 {
+    font-size: 48px;
+    letter-spacing: 5px;
+  }
+}
+@media (min-width: 992px) {
+  .section14-text2 {
+    font-size: 50px;
+    letter-spacing: 6px;
+  }
+}
+
+.section14-text3 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  white-space: nowrap;
+  font-size: 36px;
+  letter-spacing: 20px;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .section14-text3 {
+    font-size: 48px;
+  }
+}
+@media (min-width: 992px) {
+  .section14-text3 {
+    font-size: 56px;
+  }
 }/*# sourceMappingURL=main.css.map */
