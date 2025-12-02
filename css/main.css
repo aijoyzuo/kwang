@@ -88,17 +88,17 @@ body {
 }
 
 .kwang-contect {
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 1.7px;
 }
 @media (min-width: 768px) {
   .kwang-contect {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media (min-width: 992px) {
   .kwang-contect {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
