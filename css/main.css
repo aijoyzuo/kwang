@@ -999,7 +999,7 @@ body {
 }
 @media (min-width: 992px) {
   .section14bg-container {
-    width: 80%;
+    width: 85%;
   }
 }
 
@@ -1114,5 +1114,53 @@ body {
 @media (min-width: 992px) {
   .section14-text3 {
     font-size: 180px;
+  }
+}
+
+.section14-text4 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  white-space: nowrap;
+  padding-top: 20px;
+  font-size: 24px;
+  letter-spacing: 5px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .section14-text4 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 992px) {
+  .section14-text4 {
+    font-size: 40px;
+  }
+}
+
+.section14-line1 {
+  position: relative;
+  height: 250px;
+}
+.section14-line1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10%;
+  width: 1px;
+  background: #ffffff;
+  transform: translateX(-50%);
+  z-index: 0;
+  opacity: 0.6;
+}
+@media (min-width: 768px) {
+  .section14-line1 {
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .section14-line1 {
+    height: 450px;
   }
 }/*# sourceMappingURL=main.css.map */

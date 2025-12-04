@@ -11,7 +11,7 @@
     }
 
     @media (min-width: 992px) {
-     width: 80%; 
+     width: 85%; 
     }
 }
 
@@ -117,3 +117,43 @@
 }
 
 
+.section14-text4 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    white-space: nowrap;
+    padding-top: 20px;
+    font-size: 24px;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    font-weight: 400;
+    @media (min-width: 768px) {
+        font-size: 28px;
+    }
+    @media (min-width: 992px) {
+        font-size: 40px;
+    }
+}
+
+.section14-line1 {
+  position: relative;
+  height: 250px; 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10%;              // 置中
+    width: 1px;             // 線的粗細
+    background: #ffffff;    // 線條顏色
+    transform: translateX(-50%);
+    z-index: 0;             // 線條在圖片後方
+    opacity: 0.6;           // 可改透明度
+  }
+   @media (min-width: 768px) {
+       height: 300px; 
+    }
+
+    @media (min-width: 992px) {
+        height: 450px; 
+    }
+}
