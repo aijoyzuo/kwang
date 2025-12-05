@@ -1049,21 +1049,23 @@ body {
 
 .section14-image1 {
   position: absolute;
-  top: 50%;
+  top: 80%;
   transform: translateY(-50%);
-  left: calc(50% + 20px); /* 線的 left - 圖片寬度的一半 或距離 */
-  height: 110px;
+  left: calc(50% + 100px);
+  height: 120px;
 }
 @media (min-width: 768px) {
   .section14-image1 {
-    height: 165px;
-    left: calc(50% + 30px);
+    top: 70%;
+    height: 175px;
+    left: calc(50% + 100px);
   }
 }
 @media (min-width: 992px) {
   .section14-image1 {
-    height: 200px;
-    left: calc(50% + 40px);
+    top: 75%;
+    height: 210px;
+    left: calc(50% + 100px);
   }
 }
 
