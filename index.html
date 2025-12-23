@@ -505,7 +505,7 @@
                             <img src="image/example1.png" class=" " alt="example1.png">
                         </div>
                     </div>
-                   <!-- <div class="swiper-pagination"></div> -->
+                 
                 </div>
             </div>
             <div class="section10-layout1">
@@ -549,7 +549,7 @@
                             <img src="image/example1.png" class=" " alt="example1.png">
                         </div>
                     </div>
-                    <!-- <div class="swiper-pagination"></div> -->
+                  
                 </div>
             </div>
         </section>
@@ -600,7 +600,7 @@
                             <img src="image/example1.png" class=" " alt="example1.png">
                         </div>
                     </div>
-                    <!-- <div class="swiper-pagination"></div> -->
+                  
                 </div>
             </div>
             <div class="section10-layout1">
@@ -645,7 +645,7 @@
                             <img src="image/example1.png" class=" " alt="example1.png">
                         </div>
                     </div>
-                    <!-- <div class="swiper-pagination"></div> -->
+                  
                 </div>
             </div>
         </section>
@@ -695,7 +695,7 @@
                             <img src="image/example1.png" class=" " alt="example1.png">
                         </div>
                     </div>
-                    <!-- <div class="swiper-pagination"></div> -->
+                  
                 </div>
             </div>
             <div class="section10-layout1">
@@ -739,7 +739,7 @@
                             <img src="image/example1.png" class=" " alt="example1.png">
                         </div>
                     </div>
-                    <!-- <div class="swiper-pagination"></div> -->
+                  
                 </div>
             </div>
         </section>
@@ -789,7 +789,7 @@
                                 <img src="image/example1.png" class=" " alt="example1.png">
                             </div>
                         </div>
-                        <!-- <div class="swiper-pagination"></div> -->
+                      
                     </div>
                 </div>
                 <div class="section10-layout1">
@@ -834,7 +834,7 @@
                                 <img src="image/example1.png" class=" " alt="example1.png">
                             </div>
                         </div>
-                        <!-- <div class="swiper-pagination"></div> -->
+                      
                     </div>
                 </div>
 
@@ -966,9 +966,7 @@
     <!-- Splitting.js -->
     <script src="https://cdn.jsdelivr.net/npm/splitting/dist/splitting.min.js"></script>
     <!-- WOW.js -->
-    <script src="https://cdn.jsdelivr.net/npm/wowjs/dist/wow.min.js"></script>
-    <!--swiper.js-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/wowjs/dist/wow.min.js"></script>  
 
     <!-- 自己的主程式 -->
     <script src="js/main.js"></script>
@@ -976,132 +974,85 @@
 
 </html>
 
-<!-- Initialize Swiper -->
-<!-- <script>
-    document.querySelectorAll('.mySwiper').forEach((el) => {
-        new Swiper(el, {
-            slidesPerView: 1.9,
-            spaceBetween: 20,
-            loop: false,          // 初始禁用 loop
-            centeredSlides: false,// 初始靠左
-            // pagination: {
-            //     el: el.querySelector('.swiper-pagination'),
-            //     clickable: true,
-            // },
-            breakpoints: {
-                576: { slidesPerView: 1.2 },
-                768: { slidesPerView: 1.5 },
-                992: { slidesPerView: 1.9 }
-            },
-            on: {
-                imagesReady() {
-                    // 確保所有圖片載入完成再調整位置
-                    this.slideTo(0, 0); // 強制第一張靠左
-
-                    // 延遲啟用 loop + centeredSlides
-                    setTimeout(() => {
-                        this.params.loop = true;
-                        this.params.centeredSlides = true;
-                        this.update();
-                    }, 150); // 150ms 延遲確保渲染完成
-                }
-            }
-        });
-    });
-</script> -->
-
 <script>
-    const swiperElems = document.querySelectorAll('.sample-swiper');
+  const swiperElems = document.querySelectorAll('.sample-swiper');
 
-    function isTouchLikeDevice() {
-        return window.matchMedia('(hover: none)').matches;
+  function isTouchLikeDevice() {
+    return window.matchMedia('(hover: none)').matches;
+  }
+
+  swiperElems.forEach((swiperEl) => {
+    const paginationEl = swiperEl.querySelector('.swiper-pagination');
+
+    const swiper = new Swiper(swiperEl, {
+      loop: true,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+
+      // ✅ 對 loop + auto 寬度很重要：避免 loop 回來時顯示怪掉
+      loopAdditionalSlides: 2,
+
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+
+      // Lazy（你原本的）
+      lazy: { loadPrevNext: true },
+      lazyPreloadPrevNext: 1,
+
+      // ✅ 只有真的有 pagination 才啟用
+      ...(paginationEl ? {
+        pagination: { el: paginationEl, clickable: true }
+      } : {}),
+
+      // ✅ 保險：圖片載入完成或 lazy 載好後，重新計算尺寸
+      on: {
+        imagesReady() { swiper.update(); },
+        lazyImageReady() { swiper.update(); },
+      }
+    });
+
+    // 下面你的 pointer 展開邏輯可以原封不動保留
+    function stopAutoplaySafely() {
+      if (swiper?.autoplay?.running) swiper.autoplay.stop();
+    }
+    function startAutoplaySafely() {
+      if (swiper?.autoplay && !swiper.autoplay.running) swiper.autoplay.start();
     }
 
-    swiperElems.forEach((swiperEl) => {
-        // 1) 初始化 Swiper（保留 loop/lazy/pagination）
-        const swiper = new Swiper(swiperEl, {
-            loop: true,
-            slidesPerView:'auto',
-            spaceBetween: 20,         
+    let startX = 0, startY = 0, moved = false;
+    const THRESHOLD = 8;
 
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true, // 桌機 hover 暫停
-            },
+    swiperEl.addEventListener('pointerdown', (e) => {
+      moved = false;
+      startX = e.clientX;
+      startY = e.clientY;
+    }, { passive: true });
 
-            // 你原本的 lazy 寫法（沿用）
-            lazy: {
-                loadPrevNext: true,
-            },
-            // Swiper 11 常見的 preload（保險用）
-            lazyPreloadPrevNext: 1,
+    swiperEl.addEventListener('pointermove', (e) => {
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      if (dx * dx + dy * dy > THRESHOLD * THRESHOLD) moved = true;
+    }, { passive: true });
 
-            pagination: {
-                el: swiperEl.querySelector('.swiper-pagination'),
-                clickable: true,
-            },
-        });
+    swiperEl.addEventListener('pointerup', (e) => {
+      if (!isTouchLikeDevice() || moved) return;
 
-        // 2) autoplay 安全啟停（每個實例各自）
-        function stopAutoplaySafely() {
-            if (swiper && swiper.autoplay && swiper.autoplay.running) {
-                swiper.autoplay.stop();
-            }
-        }
+      const slide = e.target.closest('.swiper-slide[data-expandable="true"]');
+      if (!slide || !swiperEl.contains(slide)) return;
 
-        function startAutoplaySafely() {
-            if (swiper && swiper.autoplay && !swiper.autoplay.running) {
-                swiper.autoplay.start();
-            }
-        }
+      const isOpen = slide.classList.contains('is-open');
+      swiperEl.querySelectorAll('.swiper-slide.is-open').forEach(el => el.classList.remove('is-open'));
 
-        // 3) 手機：點一下展開 / 再點收合 + 展開時暫停 autoplay
-        let startX = 0;
-        let startY = 0;
-        let moved = false;
-        const THRESHOLD = 8; // 位移閾值 px（可調）
+      if (!isOpen) { slide.classList.add('is-open'); stopAutoplaySafely(); }
+      else { startAutoplaySafely(); }
+    }, { passive: true });
 
-        swiperEl.addEventListener('pointerdown', (e) => {
-            moved = false;
-            startX = e.clientX;
-            startY = e.clientY;
-        }, { passive: true });
-
-        swiperEl.addEventListener('pointermove', (e) => {
-            const dx = e.clientX - startX;
-            const dy = e.clientY - startY;
-            if ((dx * dx + dy * dy) > (THRESHOLD * THRESHOLD)) {
-                moved = true;
-            }
-        }, { passive: true });
-
-        swiperEl.addEventListener('pointerup', (e) => {
-            if (!isTouchLikeDevice()) return;
-            if (moved) return;
-
-            const slide = e.target.closest('.swiper-slide[data-expandable="true"]');
-            if (!slide || !swiperEl.contains(slide)) return;
-
-            const isOpen = slide.classList.contains('is-open');
-
-            // 先收合同一個 swiper 裡其他已展開的
-            swiperEl.querySelectorAll('.swiper-slide.is-open')
-                .forEach(el => el.classList.remove('is-open'));
-
-            if (!isOpen) {
-                slide.classList.add('is-open');
-                stopAutoplaySafely();
-            } else {
-                startAutoplaySafely();
-            }
-        }, { passive: true });
-
-        // 4) 切換 slide 時：自動收合 + 恢復 autoplay
-        swiper.on('slideChangeTransitionStart', () => {
-            swiperEl.querySelectorAll('.swiper-slide.is-open')
-                .forEach(el => el.classList.remove('is-open'));
-            startAutoplaySafely();
-        });
+    swiper.on('slideChangeTransitionStart', () => {
+      swiperEl.querySelectorAll('.swiper-slide.is-open').forEach(el => el.classList.remove('is-open'));
+      startAutoplaySafely();
     });
+  });
 </script>
