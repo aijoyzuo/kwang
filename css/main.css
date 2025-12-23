@@ -891,20 +891,20 @@ body {
 }
 
 /* overlay 疊在圖片上 */
+/* base: 當成手機/觸控預設 */
 .slide-content {
   position: absolute;
-  inset: 0; /* top/right/bottom/left = 0 */
+  inset: 0;
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.55); /* 讓字清楚 */
+  background: rgba(0, 0, 0, 0.55);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
 
-/* p 的樣式 */
 .swiper-p1, .swiper-p2 {
   width: 80%;
   text-align: left;
@@ -912,26 +912,26 @@ body {
   margin: 0;
 }
 
-/* 桌機 hover 顯示 overlay 並且兩段文字都顯示 */
-@media (hover: hover) {
+/* ✅ 手機：只要 p1 */
+.swiper-p2 {
+  display: none;
+}
+
+/* ✅ 手機/觸控：點開才顯示 overlay */
+.swiper-slide.is-open .slide-content {
+  opacity: 1;
+}
+
+/* ✅ 桌機：768+ 且可 hover，hover 顯示 overlay，並顯示 p2 */
+@media (min-width: 768px) and (hover: hover) {
+  .swiper-slide.is-open .slide-content {
+    opacity: 0;
+  }
   .swiper-slide:hover .slide-content {
     opacity: 1;
   }
-  .swiper-slide .swiper-p1,
-  .swiper-slide .swiper-p2 {
+  .swiper-p2 {
     display: block;
-  }
-}
-/* 手機用點擊展開，只顯示 swiper-p1 */
-@media (hover: none) {
-  .swiper-slide.is-open .slide-content {
-    opacity: 1;
-  }
-  .swiper-slide .swiper-p1 {
-    display: block;
-  }
-  .swiper-slide .swiper-p2 {
-    display: none;
   }
 }
 .section13-overlay {

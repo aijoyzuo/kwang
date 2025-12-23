@@ -1605,7 +1605,10 @@
             slidesPerView: 'auto',
             spaceBetween: 20,
 
-            // ✅ 對 loop + auto 寬度很重要：避免 loop 回來時顯示怪掉
+            observer: true,
+            observeParents: true,
+            updateOnWindowResize: true,
+
             loopAdditionalSlides: 2,
 
             autoplay: {
@@ -1614,16 +1617,16 @@
                 pauseOnMouseEnter: true,
             },
 
-            // Lazy（你原本的）
+            // Lazy
             lazy: { loadPrevNext: true },
             lazyPreloadPrevNext: 1,
 
-            // ✅ 只有真的有 pagination 才啟用
+            // 有 pagination 時才啟用
             ...(paginationEl ? {
                 pagination: { el: paginationEl, clickable: true }
             } : {}),
 
-            // ✅ 保險：圖片載入完成或 lazy 載好後，重新計算尺寸
+            // 圖片載入完成或 lazy 載好後，重新計算尺寸
             on: {
                 imagesReady() { swiper.update(); },
                 lazyImageReady() { swiper.update(); },
