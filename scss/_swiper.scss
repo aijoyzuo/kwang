@@ -5,18 +5,18 @@
 
 .sample-swiper {
   padding-left: 0;
-  padding-right: 64px;   /* 手機：露出約 20% 的 320px */
+  padding-right: 64px;   
 }
 
 @media (min-width: 768px) {
   .sample-swiper {
-    padding-right: 100px; /* 平板：露出約 20% 的 500px */
+    padding-right: 100px; 
   }
 }
 
 @media (min-width: 992px) {
   .sample-swiper {
-    padding-right: 120px; /* 桌機：露出約 20% 的 600px */
+    padding-right: 120px; 
   }
 }
 
@@ -41,4 +41,57 @@
   width: 100%;
   height: 100%;
   object-fit: cover; /* 讓圖片填滿、不變形 */
+  display: block;
+}
+
+
+ /* overlay 疊在圖片上 */
+.slide-content {
+  position: absolute;
+  inset: 0;                 /* top/right/bottom/left = 0 */
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  background: rgba(0,0,0,.55); /* 讓字清楚 */
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+/* p 的樣式 */
+.swiper-p1, .swiper-p2 {
+  width: 70%;
+  text-align: left;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* 桌機 hover 顯示 overlay 並且兩段文字都顯示 */
+@media (hover: hover) {
+  .swiper-slide:hover .slide-content {
+    opacity: 1;
+  }
+
+  .swiper-slide .swiper-p1,
+  .swiper-slide .swiper-p2 {
+    display: block;
+  }
+}
+
+/* 手機用點擊展開，只顯示 swiper-p1 */
+@media (hover: none) {
+  .swiper-slide.is-open .slide-content {
+    opacity: 1;
+  }
+
+  .swiper-slide .swiper-p1 {
+    display: block;
+  }
+
+  .swiper-slide .swiper-p2 {
+    display: none;
+  }
 }
