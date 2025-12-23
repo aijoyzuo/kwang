@@ -847,6 +847,21 @@ body {
   padding: 20px 0;
 }
 
+.sample-swiper {
+  padding-left: 0;
+  padding-right: 64px; /* 手機：露出約 20% 的 320px */
+}
+
+@media (min-width: 768px) {
+  .sample-swiper {
+    padding-right: 100px; /* 平板：露出約 20% 的 500px */
+  }
+}
+@media (min-width: 992px) {
+  .sample-swiper {
+    padding-right: 120px; /* 桌機：露出約 20% 的 600px */
+  }
+}
 .swiper-slide {
   width: 320px; /* 固定寬度 */
   height: 100%; /* 固定高度 */
@@ -858,12 +873,12 @@ body {
 }
 @media (min-width: 768px) {
   .swiper-slide {
-    width: 500px;
+    width: 450px;
   }
 }
 @media (min-width: 992px) {
   .swiper-slide {
-    width: 600px;
+    width: 550px;
   }
 }
 
