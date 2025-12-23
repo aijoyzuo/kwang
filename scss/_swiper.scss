@@ -46,7 +46,6 @@
 
 
  /* overlay 疊在圖片上 */
-/* base: 當成手機/觸控預設 */
 .slide-content {
   position: absolute;
   inset: 0;
@@ -69,15 +68,13 @@
   margin: 0;
 }
 
-/* ✅ 手機：只要 p1 */
+/* 手機：只要 p1 */
 .swiper-p2 { display: none; }
-
-/* ✅ 手機/觸控：點開才顯示 overlay */
 .swiper-slide.is-open .slide-content {
   opacity: 1;
 }
 
-/* ✅ 桌機：768+ 且可 hover，hover 顯示 overlay，並顯示 p2 */
+/* 桌機 */
 @media (min-width: 768px) and (hover: hover) {
   .swiper-slide.is-open .slide-content {
     opacity: 0; // 可選：避免桌機還被點開樣式影響
