@@ -111,14 +111,14 @@ body {
   width: 100%;
   max-width: 1000px;
   z-index: 9999;
-  padding: 18px 42px;
+  padding: 16px 42px;
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(6px);
+  @media (min-width: 768px) {
+   padding: 10px 42px;
+  }
 }
 
-.section1-overlay .content {
-  padding-top: 90px;
-}
 
 /* === Bottom Bar: fixed to bottom === */
 .kwang-bottombar{
@@ -129,19 +129,12 @@ body {
   z-index: 9999;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 18px 42px;
-  padding-bottom: calc(18px + env(safe-area-inset-bottom));
+  padding: 16px 42px; 
   background: rgba(0,0,0,0.65);
   backdrop-filter: blur(6px);
+    @media (min-width: 768px) {
+   padding: 10px 42px;
+  }
 }
 
 
-@media (min-width: 768px){
-  .kwang-bottombar{ padding-left: 70px; padding-right: 70px; }
-}
-@media (min-width: 992px){
-  .kwang-bottombar{ padding-left: 90px; padding-right: 90px; }
-}
-.section1-overlay{
-  padding-bottom: 110px;
-}
