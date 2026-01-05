@@ -138,3 +138,16 @@ body {
 }
 
 
+.minheight{
+  min-height: 700px !important;
+    @media (min-width: 768px) {
+  min-height: 900px !important;
+  }
+}
+
+.minheight2{
+  min-height: 400px !important;
+    @media (min-width: 768px) {
+  min-height: 900px !important;
+  }
+}
