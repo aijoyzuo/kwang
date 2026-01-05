@@ -863,8 +863,9 @@ body {
   }
 }
 .swiper-slide {
-  width: 320px; /* 固定寬度 */
-  height: 100%; /* 固定高度 */
+  position: relative; /* 新增 */
+  width: 320px !important; /* 固定寬度 */
+  aspect-ratio: 3/4 !important; /* 固定高度 */
   background: #444;
   display: flex;
   justify-content: center;
@@ -873,12 +874,12 @@ body {
 }
 @media (min-width: 768px) {
   .swiper-slide {
-    width: 450px;
+    width: 450px !important;
   }
 }
 @media (min-width: 992px) {
   .swiper-slide {
-    width: 550px;
+    width: 550px !important;
   }
 }
 
