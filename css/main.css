@@ -923,13 +923,18 @@ body {
 }
 .swiper-slide {
   position: relative; /* 新增 */
-  width: 320px !important; /* 固定寬度 */
+  width: 310px !important; /* 固定寬度 */
   aspect-ratio: 3/4 !important; /* 固定高度 */
   background: #444;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden; /* 避免圖片溢出 */
+}
+@media (min-width: 650px) {
+  .swiper-slide {
+    width: 400px !important;
+  }
 }
 @media (min-width: 768px) {
   .swiper-slide {
