@@ -645,17 +645,21 @@ body {
   }
 }
 
+.Section4margin {
+  margin: 0px;
+}
+
 .content2-body {
-  padding: 86px 0px;
+  padding: 30px 0 40px 0;
 }
 @media (min-width: 768px) {
   .content2-body {
-    padding: 146px 0px;
+    padding: 50px 0px;
   }
 }
 @media (min-width: 992px) {
   .content2-body {
-    padding: 171px 0px;
+    padding: 57px 0px;
   }
 }
 
@@ -698,19 +702,21 @@ body {
 
 .bgimage-white {
   max-width: 100px;
-  bottom: 2px;
+  bottom: -44px;
   left: 17%;
   z-index: 20;
 }
 @media (min-width: 768px) {
   .bgimage-white {
     max-width: 170px;
+    bottom: -90px;
     left: 15%;
   }
 }
 @media (min-width: 992px) {
   .bgimage-white {
     max-width: 200px;
+    bottom: -110px;
     left: 15%;
   }
 }
@@ -755,12 +761,12 @@ body {
 
 .logo-content {
   padding-top: 20px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 @media (min-width: 768px) {
   .logo-content {
     padding-top: 80px;
-    padding-bottom: 180px;
+    padding-bottom: 120px;
   }
 }
 
@@ -1003,16 +1009,16 @@ body {
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
   background-color: #ffffff;
-  padding: 86px 0px;
+  padding: 30px 0 40px 0;
 }
 @media (min-width: 768px) {
   .section13-overlay {
-    padding: 146px 0px;
+    padding: 50px 0px;
   }
 }
 @media (min-width: 992px) {
   .section13-overlay {
-    padding: 171px 0px;
+    padding: 57px 0px;
   }
 }
 

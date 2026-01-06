@@ -1,12 +1,12 @@
 .content2-body {
-    padding: 86px 0px;
+    padding: 30px 0 40px 0;
 
     @media (min-width: 768px) {
-        padding: 146px 0px;
+        padding: 50px 0px;
     }
 
     @media (min-width: 992px) {
-        padding: 171px 0px;
+        padding: 57px 0px;
     }
 }
 
@@ -44,16 +44,18 @@
 
 .bgimage-white {
    max-width: 100px;   
-    bottom: 2px;
+    bottom: -44px;
     left: 17%;   
      z-index: 20;
      @media (min-width: 768px) {
         max-width: 170px; 
+        bottom: -90px;
         left: 15%;
     }
 
     @media (min-width: 992px) {
         max-width: 200px; 
+        bottom: -110px;
         left: 15%;
     }
 }
