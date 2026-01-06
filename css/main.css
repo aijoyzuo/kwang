@@ -1127,25 +1127,25 @@ body {
 }
 
 .section14-overlay {
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 @media (min-width: 768px) {
   .section14-overlay {
-    padding-top: 450px;
-    padding-bottom: 450px;
+    padding-top: 160px;
+    padding-bottom: 160px;
   }
 }
 @media (min-width: 992px) {
   .section14-overlay {
-    padding-top: 500px;
-    padding-bottom: 500px;
+    padding-top: 240px;
+    padding-bottom: 240px;
   }
 }
 
 .section14-line1 {
   position: relative;
-  height: 200px;
+  height: 160px;
 }
 .section14-line1::before {
   content: "";
@@ -1166,7 +1166,7 @@ body {
 }
 @media (min-width: 992px) {
   .section14-line1 {
-    height: 280px;
+    height: 200px;
   }
 }
 
