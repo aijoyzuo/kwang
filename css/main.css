@@ -1122,8 +1122,8 @@ body {
 }
 
 .section14-overlay {
-  padding-top: 160px;
-  padding-bottom: 160px;
+  padding-top: 140px;
+  padding-bottom: 140px;
 }
 @media (min-width: 768px) {
   .section14-overlay {
@@ -1133,8 +1133,8 @@ body {
 }
 @media (min-width: 992px) {
   .section14-overlay {
-    padding-top: 530px;
-    padding-bottom: 530px;
+    padding-top: 500px;
+    padding-bottom: 500px;
   }
 }
 
