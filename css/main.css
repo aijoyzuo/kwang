@@ -1027,6 +1027,53 @@ body {
     display: block;
   }
 }
+/*開啟lightbox功能*/
+.project-modal {
+  width: 85vw;
+  max-width: 900px;
+}
+
+.modal-dialog-centered {
+  align-items: flex-start;
+  display: flex;
+}
+
+#pm-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-modal {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-backdrop {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.project-modal .btn-close {
+  filter: invert(1);
+}
+
+.modal-text2 {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+@media (min-width: 768px) {
+  .modal-text2 {
+    font-size: 14px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-text2 {
+    font-size: 16x;
+  }
+}
+
 .section13-overlay {
   position: relative;
   overflow: hidden;
