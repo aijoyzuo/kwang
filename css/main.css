@@ -1029,8 +1029,13 @@ body {
 }
 /*開啟lightbox功能*/
 .project-modal {
-  width: 85vw;
+  width: 90vw;
   max-width: 900px;
+}
+@media (min-width: 768px) {
+  .project-modal {
+    width: 85vw;
+  }
 }
 
 .modal-dialog-centered {

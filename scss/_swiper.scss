@@ -97,8 +97,11 @@
 
 /*開啟lightbox功能*/
 .project-modal {
-  width: 85vw;
+  width: 90vw;
   max-width: 900px;
+  @media (min-width: 768px) {
+       width: 85vw;
+    }
 }
 
 
