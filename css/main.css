@@ -1028,6 +1028,10 @@ body {
   }
 }
 /*開啟lightbox功能*/
+.swiper--modal {
+  cursor: pointer;
+}
+
 .project-modal {
   width: 90vw;
   max-width: 900px;

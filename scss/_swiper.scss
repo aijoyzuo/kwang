@@ -96,7 +96,10 @@
 
 
 /*開啟lightbox功能*/
-.project-modal {
+.swiper--modal{
+  cursor: pointer;
+}
+.project-modal { 
   width: 90vw;
   max-width: 900px;
   @media (min-width: 768px) {
