@@ -101,8 +101,8 @@ body {
 }
 
 
-/*-----------------------------------*/
-/* ===== Top fixed brand bar ===== */
+/*==========置頂置底設置==========*/
+
 .kwang-topbar {
   position: fixed;
   top: 0;
@@ -119,8 +119,6 @@ body {
   }
 }
 
-
-/* === Bottom Bar: fixed to bottom === */
 .kwang-bottombar{
   position: fixed;
   left: 0;
@@ -151,3 +149,19 @@ body {
   min-height: 900px !important;
   }
 }
+
+
+/* ==========社群 icon ==========*/
+
+.snsicon {
+    height: 14px;
+
+    @media (min-width: 768px) {
+        height: 18px;
+    }
+
+    @media (min-width: 992px) {
+        height: 32px;
+    }
+}
+

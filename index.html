@@ -552,6 +552,50 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-slide" data-expandable="true" data-title="B - 2023.09.17 醫美未來式"
+                            data-desc="活動亮點 | 以磅礴氣勢展現產品實力，搭配專業會議形式，將新品效能精準傳遞給醫師<br>
+             與會人數 | 310人<br>
+             活動滿意度 | 97%<br>
+             籌備期 | 2023.05–09<br>
+             SERVICE | 活動內容策劃 / 視覺設計 / 場地佈置規劃 / 細流整合規劃 / 主持人、藝人、表演團體接洽 / 成效檢視與後續報告"
+                            data-images="image/example2.png,image/example2-2.jpg,image/example2-3.jpg">
+                            <img src="image/example2.png" class=" " alt="example2.png">
+                            <div class="slide-content text-white d-flex flex-column">
+                                <div class="swiper-p1 mb-3">
+                                    <span class=""><b>A - 2023.09.17 醫美未來式</b></span><br>
+                                    <span class="">活動亮點 | 以磅礴氣勢展現產品實力，搭配專業會議形式，將新品效能精準傳遞給醫師</span><br>
+                                </div>
+                                <div class="swiper-p2">
+                                    <span>與會人數 | 310人</span><br>
+                                    <span>活動滿意度 | 97%</span><br>
+                                    <span>籌備期 | 2023.05–09</span><br>
+                                    <span>SERVICE | 活動內容策劃 / 視覺設計 / 場地佈置規劃 / 細流整合規劃 / 主持人、藝人、表演團體接洽 /
+                                        成效檢視與後續報告</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-expandable="true" data-title="A - 2023.09.17 醫美未來式"
+                            data-desc="活動亮點 | 以磅礴氣勢展現產品實力，搭配專業會議形式，將新品效能精準傳遞給醫師<br>
+             與會人數 | 310人<br>
+             活動滿意度 | 97%<br>
+             籌備期 | 2023.05–09<br>
+             SERVICE | 活動內容策劃 / 視覺設計 / 場地佈置規劃 / 細流整合規劃 / 主持人、藝人、表演團體接洽 / 成效檢視與後續報告"
+                            data-images="image/example1.png,image/example1-2.jpg,image/example1-3.jpg">
+                            <img src="image/example1.png" class=" " alt="example1.png">
+                            <div class="slide-content text-white d-flex flex-column">
+                                <div class="swiper-p1 mb-3">
+                                    <span class=""><b>A - 2023.09.17 醫美未來式</b></span><br>
+                                    <span class="">活動亮點 | 以磅礴氣勢展現產品實力，搭配專業會議形式，將新品效能精準傳遞給醫師</span><br>
+                                </div>
+                                <div class="swiper-p2">
+                                    <span>與會人數 | 310人</span><br>
+                                    <span>活動滿意度 | 97%</span><br>
+                                    <span>籌備期 | 2023.05–09</span><br>
+                                    <span>SERVICE | 活動內容策劃 / 視覺設計 / 場地佈置規劃 / 細流整合規劃 / 主持人、藝人、表演團體接洽 /
+                                        成效檢視與後續報告</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1562,120 +1606,3 @@
 </body>
 
 </html>
-
-<script>
-    const swiperElems = document.querySelectorAll('.sample-swiper');
-
-    function isTouchLikeDevice() {
-        return window.matchMedia('(hover: none)').matches;
-    }
-
-    swiperElems.forEach((swiperEl) => {
-        const paginationEl = swiperEl.querySelector('.swiper-pagination');
-
-        const swiper = new Swiper(swiperEl, {
-            loop: true,
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-
-            observer: true,
-            observeParents: true,
-            updateOnWindowResize: true,
-
-            loopAdditionalSlides: 2,
-
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
-
-            // Lazy
-            lazy: { loadPrevNext: true },
-            lazyPreloadPrevNext: 1,
-
-            // 有 pagination 時才啟用
-            ...(paginationEl ? {
-                pagination: { el: paginationEl, clickable: true }
-            } : {}),
-
-            // 圖片載入完成或 lazy 載好後，重新計算尺寸
-            on: {
-                imagesReady() { swiper.update(); },
-                lazyImageReady() { swiper.update(); },
-            }
-        });
-
-        // 下面你的 pointer 展開邏輯可以原封不動保留
-        function stopAutoplaySafely() {
-            if (swiper?.autoplay?.running) swiper.autoplay.stop();
-        }
-        function startAutoplaySafely() {
-            if (swiper?.autoplay && !swiper.autoplay.running) swiper.autoplay.start();
-        }
-
-        let startX = 0, startY = 0, moved = false;
-        const THRESHOLD = 8;
-
-        swiperEl.addEventListener('pointerdown', (e) => {
-            moved = false;
-            startX = e.clientX;
-            startY = e.clientY;
-        }, { passive: true });
-
-        swiperEl.addEventListener('pointermove', (e) => {
-            const dx = e.clientX - startX;
-            const dy = e.clientY - startY;
-            if (dx * dx + dy * dy > THRESHOLD * THRESHOLD) moved = true;
-        }, { passive: true });
-
-        swiperEl.addEventListener('pointerup', (e) => {
-            if (!isTouchLikeDevice() || moved) return;
-
-            const slide = e.target.closest('.swiper-slide[data-expandable="true"]');
-            if (!slide || !swiperEl.contains(slide)) return;
-
-            const isOpen = slide.classList.contains('is-open');
-            swiperEl.querySelectorAll('.swiper-slide.is-open').forEach(el => el.classList.remove('is-open'));
-
-            if (!isOpen) { slide.classList.add('is-open'); stopAutoplaySafely(); }
-            else { startAutoplaySafely(); }
-        }, { passive: true });
-
-        swiper.on('slideChangeTransitionStart', () => {
-            swiperEl.querySelectorAll('.swiper-slide.is-open').forEach(el => el.classList.remove('is-open'));
-            startAutoplaySafely();
-        });
-    });
-</script>
-<script>
-    /*開啟lightbox功能*/
-   const modalEl = document.getElementById('projectModal');
-const bsModal = new bootstrap.Modal(modalEl);
-
-document.querySelectorAll('.swiper--modal .swiper-slide')
-  .forEach(slide => {
-    slide.addEventListener('click', e => {
-      e.stopPropagation();
-
-      // 資料
-      const title = slide.dataset.title;
-      const desc = slide.dataset.desc;
-      const images = slide.dataset.images.split(',');
-
-      // 塞資料
-      document.getElementById('pm-title').textContent = title;
-      document.getElementById('pm-desc').innerHTML = desc;
-
-      const imgBox = document.getElementById('pm-images');
-      imgBox.innerHTML = '';
-      images.forEach(src => {
-        imgBox.innerHTML += `<img src="${src}" alt="">`;
-      });
-
-      // 開啟 modal
-      bsModal.show();
-    });
-  });
-
-</script>

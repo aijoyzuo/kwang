@@ -1,6 +1,5 @@
 .section1-overlay {
-    position: relative;
-    /* 父元素要相對定位 */
+    position: relative; 
 }
 
 .section1-overlay::before {
@@ -8,10 +7,8 @@
     position: absolute;
     inset: 0;
     /* top:0; right:0; bottom:0; left:0 */
-    background-color: rgba(0, 0, 0, 0.7);
-    /* 半透明黑色 */
-    z-index: 1;
-    /* 放在背景上，文字下方 */
+    background-color: rgba(0, 0, 0, 0.7);   
+    z-index: 1;   
 }
 
 /* Section 1 圖片 */
@@ -23,7 +20,7 @@
     }
 
     @media (min-width: 992px) {
-        height: 140px; // 桌面可再調整
+        height: 140px; 
     }
 }
 
@@ -90,19 +87,6 @@
     }
 }
 
-/* 社群 icon */
-
-.snsicon {
-    height: 14px;
-
-    @media (min-width: 768px) {
-        height: 18px;
-    }
-
-    @media (min-width: 992px) {
-        height: 32px;
-    }
-}
 
 .Section1margin{
     margin: 50px 0px;

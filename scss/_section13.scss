@@ -27,10 +27,10 @@
     }
 }
 
-/* 背景圖片的區塊（會佔空間，不會壓住上面文字） */
+/* 背景圖片的區塊 */
 .section13bg-container {
     width: 100%;
-    height: 600px; /* 區塊高度你可自訂 */
+    height: 600px; 
     position: relative;
     background-size: cover;
     background-position: center;

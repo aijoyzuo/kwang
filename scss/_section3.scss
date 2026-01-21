@@ -37,12 +37,12 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 10%;              // 置中
-    width: 1px;             // 線的粗細
-    background: #ffffff;    // 線條顏色
+    left: 10%;              
+    width: 1px;             
+    background: #ffffff;    
     transform: translateX(-50%);
-    z-index: 0;             // 線條在圖片後方
-    opacity: 0.6;           // 可改透明度
+    z-index: 0;             
+    opacity: 0.6;           
   }
    @media (min-width: 768px) {
        height: 250px; 
@@ -60,12 +60,12 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50%;              // 置中
-    width: 1px;             // 線的粗細
-    background: #ffffff;    // 線條顏色
+    left: 50%;              
+    width: 1px;             
+    background: #ffffff;    
     transform: translateX(-50%);
-    z-index: 0;             // 線條在圖片後方
-    opacity: 0.6;           // 可改透明度
+    z-index: 0;             
+    opacity: 0.6;           
   }
    @media (min-width: 768px) {
        height: 210px; 
